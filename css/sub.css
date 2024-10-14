@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/*
+sub css: 서브페이지 css
+최초 작성일: 2024.09.30
+최초 작성자: 남서연
+*/
+
+/*container*/
+#container {
+  padding: 200px 0;
+  background-color: #E0EDF9;
+  text-align: center;
+}
+
+@media screen and (max-width : 768px) {
+  #container {
+    padding: 70px 0;
+  }
+}
+
+/*gallery*/
+.gallery {
+  padding: 0 3%;
+}
+
+@media screen and (max-width : 768px) {
+  .gallery {
+    padding: 0 6%;
+  }
+}
+
+/*search*/
+.search {
+  padding-bottom: 50px;
+}
+
+.search div {
+  display: inline-block;
+  width: 55%;
+  background-color: #fff;
+  border-radius: 30px;
+  min-width: 260px;
+  overflow: hidden;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.search input[type="text"] {
+  width: calc(100% - 100px);
+  height: 70px;
+  padding: 0 40px;
+  font-size: 2.4rem;
+}
+
+.search button {
+  width: 50px;
+  height: 70px;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  color: #5F6368;
+}
+
+@media screen and (max-width : 768px) {
+  .search div {
+    width: 90%;
+    height: 50px;
+  }
+
+  .search input[type="text"] {
+    font-size: 2rem;
+    height: 50px;
+    padding: 0 20px;
+  }
+
+  .search button {
+    height: 50px;
+  }
+}
+
+/*g-list*/
+.g-list {
+  text-align: left;
+}
+
+.g-list > div {
+  margin-bottom: 170px;
+}
+
+.g-list > div:last-child {
+  margin-bottom: 0;
+}
+
+.g-list h2 {
+  padding-bottom: 15px;
+}
+
+.g-list li {
+  position: relative;
+  width: 342px;
+  height: 462px;
+}
+
+.g-list li img {
+  width: 100%;
+}
+
+.g-list dl {
+  position: absolute;
+  top: 70%;
+  left: 8%;
+  text-align: left;
+}
+
+.g-list dl dd {
+  font-size: 2.4rem;
+  font-weight: 500px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: #4262FF;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.g-list > div:hover .swiper-button-next:after,
+.g-list > div:hover .swiper-button-prev:after {
+  opacity: 1;
+}
+
+@media screen and (max-width : 768px) {
+  .g-list > div {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .g-list h2 {
+    text-align: left;
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+/*
+common css: 공통, header, footer
+최초 작성일: 2024.09.19
+최초 작성자: 남서연
+*/
+
+/*공통 css*/
+#wrap {
+  min-width: 320px;
+  position: relative;
+}
+
+.inner {
+  max-width: 1700px;
+  padding: 0 10%;
+  margin: 0 auto;
+}
+
+/*header*/
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  padding: 50px 0;
+  font-size: 3.2rem;
+  font-weight: normal;
+}
+
+header h1 span {
+  color: #4262FF;
+  padding-left: 15px;
+}
+
+header .gnb {
+  display: flex;
+}
+
+header .gnb > li {
+  position: relative;
+}
+
+header .gnb > li > a {
+  display: block;
+  padding: 0 40px;
+  font-size: 2.4rem;
+  transition: color 0.5s;
+}
+
+header .gnb > li:hover > a {
+  color: #4262FF;
+}
+
+header .gnb .depth2 {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+header .gnb .depth2 li a {
+  display: block;
+  padding: 25px 30px;
+  font-size: 2rem;
+  color: #fff;
+  transition: color 0.5s;
+}
+
+header .gnb .depth2 li:hover a {
+  color: #FFF953;
+}
+
+header .depth2-bg {
+  width: 100%;
+  height: 80px;
+  background-color: #88A5E3;
+  position: absolute;
+  top: 145px;
+  left: 0;
+  z-index: 98;
+}
+
+header .download {
+  width: 170px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #4262FF;
+  text-align: center;
+  line-height: 50px;
+}
+
+header .download a {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+header .dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header .mgnb-wrap {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  padding: 100px 50px 50px;
+  z-index: 9999;
+}
+
+header .mgnb-wrap h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #4262FF;
+  padding-bottom: 5px;
+}
+
+header .mgnb-wrap .mgnb > li {
+  border-top: 1px solid #000;
+  padding: 20px 0;
+  position: relative;
+}
+header .mgnb-wrap .mgnb > li:last-child {
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+}
+
+header .mgnb-wrap .mgnb > li > a {
+  font-size: 1.6rem;
+  padding-left: 20px;
+  transition: color 0.5s;
+}
+
+header .mgnb-wrap .mgnb > li:hover > a {
+  color: #4262FF;
+}
+
+header .mgnb-wrap .mgnb .mdepth2 {
+  background-color: #88A5E3;
+  border-top: 1px solid #000;
+  margin-top: 20px;
+  padding: 20px 30px;
+}
+
+header .mgnb-wrap .mgnb .mdepth2 li {
+  margin-bottom: 10px;
+}
+header .mgnb-wrap .mgnb .mdepth2 li:last-child {
+  margin-bottom: 0;
+}
+
+header .mgnb-wrap .mgnb .mdepth2 li a {
+  color: #fff;
+  transition: color 0.5s;
+}
+
+header .mgnb-wrap .mgnb .mdepth2 li:hover a {
+  color: #FFF953;
+}
+
+.arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.arrow.active {
+  transform: rotate(180deg);
+}
+
+.mgnb-close {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding-right: 15%;
+}
+
+.mdownload {
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #4262FF;
+  margin: 60px auto 0;
+  text-align: center;
+  line-height: 50px;
+}
+
+.mdownload a {
+  color: #fff;
+}
+
+.ham {
+  display: none;
+}
+.menu {
+  color: #4262FF;
+  transform: scale(120%);
+}
+
+/*header 모바일*/
+@media screen and (max-width : 768px) {
+  header .inner {
+    padding: 0 5%;
+  }
+
+  header h1 {
+    padding-left: 10px;
+  }
+
+  header .gnb,
+  header .download {
+    display: none;
+  }
+
+  header .ham {
+    display: block;
+  }
+
+  header h1 {
+    transform: scale(70%);
+    padding: 15px 0;
+  }
+}
+
+/*footer*/
+footer {
+  padding: 130px 0;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-weight: 300;
+}
+
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+footer h1 {
+  font-size: 3.2rem;
+  font-weight: normal;
+}
+
+footer h1 span {
+  color: #fff;
+  padding-left: 15px;
+}
+
+footer .link {
+  display: flex;
+  gap: 70px;
+}
+
+footer .link a {
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+footer .sns {
+  display: flex;
+  gap: 20px;
+}
+
+/*footer 모바일*/
+@media screen and (max-width : 768px) {
+  footer {
+    padding: 30px 0;
+  }
+
+  footer .inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  footer h1 img {
+    width: 80%;
+  }
+
+  footer h1 span {
+    display: block;
+    padding-left: 0;
+    font-size: 1.4rem;
+  }
+
+  footer .copy {
+    font-size: 1.2rem;
+  }
+
+  footer .link a {
+    font-size: 1.2rem;
+  }
+
+  footer .sns {
+    transform: scale(70%);
+  }
+}
